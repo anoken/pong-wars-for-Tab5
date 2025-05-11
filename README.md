@@ -1,5 +1,8 @@
 # PongWars_for_Tab5 
 
+![image](https://github.com/user-attachments/assets/5a68e7ea-dd0b-4b99-8647-844d7b10d3f9)
+https://x.com/anoken2017/status/1921390813499601141
+
 M5Stack Tab5（ESP32-P4搭載）上で動作するPong「PongWars」です。
 PlatformIOとM5Unifiedライブラリを使用しています。
 
