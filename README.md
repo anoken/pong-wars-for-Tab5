@@ -1,7 +1,7 @@
 # PongWars_for_Tab5 
 
 M5Stack Tab5（ESP32-P4搭載）上で動作するPong「PongWars」です。
-M5Unifiedライブラリを活用しています。
+PlatformIOとM5Unifiedライブラリを使用しています。
 
 ## 特徴
 - M5Stack Tab5（ESP32-P4）専用
