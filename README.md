@@ -37,5 +37,5 @@ M5Unifiedライブラリを活用しています。
 また、pong-warsのオリジナル実装や関連プロジェクトについては下記もご参照ください：
 - JavaScript版: https://github.com/vnglst/pong-wars/
 
-
-
+Tab5のPlatformIO IDE 向け設定ファイルは @saitotetsuya -sanの PlatformIO IDE 向け M5Stack 定型コード環境を参考にしました。
+https://github.com/3110/m5stack-platformio-boilerplate-code/
