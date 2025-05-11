@@ -33,11 +33,9 @@ M5Unifiedライブラリを活用しています。
 
 ## 参考・引用元
 本プロジェクトは [anoken/pong-wars-forM5Stack](https://github.com/anoken/pong-wars-forM5Stack) を元にTab5に移植・拡張しています。
-オリジナルは M5Stack Core2 用ですが、本リポジトリは M5Stack Tab5（ESP32-P4）向けに移植・拡張しています。
 
 また、pong-warsのオリジナル実装や関連プロジェクトについては下記もご参照ください：
 - JavaScript版: https://github.com/vnglst/pong-wars/
-- Python版: https://github.com/vocdex/pong-wars-python
-- Matlab版: https://github.com/minoue-xx/digital-art-with-matlab
+
 
 
