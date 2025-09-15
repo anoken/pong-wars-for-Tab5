@@ -1,11 +1,12 @@
 // Copyright (c) 2025 aNoken
 
 #include <M5Unified.h>
+#include <LGFX_PPA.hpp>
 
 // 画像の幅と高さ、四角形のサイズ、四角形の数を定義
-int img_width = 640;
-int img_height = 960;
-int SQUARE_SIZE = 32;
+int img_width = 360;
+int img_height = 640;
+int SQUARE_SIZE = 16;
 int numSquaresX = img_width / SQUARE_SIZE + 1;
 int numSquaresY = img_height / SQUARE_SIZE + 1;
 
@@ -13,7 +14,8 @@ int numSquaresY = img_height / SQUARE_SIZE + 1;
 std::vector<std::vector<int>> squares;
 
 // M5UnifiedのCanvasオブジェクト
-M5Canvas canvas(&M5.Display);
+PPA_Sprite canvas(&M5.Display);
+PPASrm *ppa_srm;
 
 // ボールの情報を格納する構造体のベクトル
 struct _pong {
@@ -95,6 +97,7 @@ void setup(void) {
   auto cfg = M5.config();
   M5.begin(cfg);
   canvas.createSprite(img_width, img_height);
+  ppa_srm = new PPASrm(&M5.Display, false);
 
   // 四角形の位置情報を初期化
   squares.resize(numSquaresX);
@@ -149,10 +152,8 @@ void setup(void) {
   pong[3].dy = vel;
   pong[3].class_num = 3;
 }
-void loop(void) {
-  // 画面の描画処理を開始
-  M5.Display.startWrite();
 
+void loop(void) {
   // 四角形の描画
   for (int i = 0; i < squares.size(); i++) {
     for (int j = 0; j < squares[i].size(); j++) {
@@ -205,10 +206,10 @@ void loop(void) {
   }
 
   // Canvasに描画された内容をスクリーンに転送
-  canvas.pushSprite(0, 0);
 
-  // 画面の描画処理を終了
-  M5.Display.endWrite();
+  if( ppa_srm->available() ) {
+    ppa_srm->pushSRM( &canvas, 0, 0, 2, 2 );
+  }
 
   // 10ミリ秒待機
   M5.delay(1);
