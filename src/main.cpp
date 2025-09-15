@@ -73,7 +73,7 @@ int updateSquareAndBounce(int numSquaresX, int numSquaresY, double x, double y,
   }
 
   // ボールがループにはまらないように、バウンドにノイズを加える
-  double theta = M_PI / 4 * (1 + randomNum(-0.1, 1));
+  double theta = M_PI / 4 * (1 + randomNum(-0.1, 0.1));
   dx = sign(updatedDx) * vel * cos(theta);
   dy = sign(updatedDy) * vel * sin(theta);
 
