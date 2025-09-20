@@ -44,7 +44,7 @@ PlatformIOとM5Unifiedライブラリを使用しています。
  * Tab5のPlatformIO IDE 向け設定ファイルは @saitotetsuya -sanの PlatformIO IDE 向け M5Stack 定型コード環境を参考にしました。
 https://github.com/3110/m5stack-platformio-boilerplate-code/
 
-   *tobozo 氏よりプルリクを頂き、 Pixel Processing Accelerator (PPA)　での描画高速化が導入されました。
+ * tobozo 氏よりプルリクを頂き、 Pixel Processing Accelerator (PPA)　での描画高速化が導入されました。
 https://github.com/tobozo/LGFX_PPA  
 https://github.com/anoken/pong-wars-for-Tab5/pulls?q=is%3Apr+is%3Aclosed  
 
